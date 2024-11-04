@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Chat Analyzer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .chart-container {
+            width: 100%;
+            height: auto;
+        }
+        .results {
+            margin-top: 20px;
+        }
+        #topDays, #mediaMessages, #topEmojis, #activeDays, #topUsers {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="text-center">WhatsApp Chat Analyzer</h1>
+    <form id="chatForm" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="chatFile">Upload Chat File:</label>
+            <input type="file" id="chatFile" name="chatFile" class="form-control" accept=".txt" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Analyze</button>
+    </form>
+
+    <div class="results">
+        <h2>Total Messages</h2>
+        <div id="totalMessages" class="alert alert-info"></div>
+
+        <h2>Top Days</h2>
+        <div id="topDays" class="alert alert-light"></div>
+
+        <h2>Media Messages</h2>
+        <div id="mediaMessages" class="alert alert-light"></div>
+
+        <h2>Top Emojis</h2>
+        <div id="topEmojis" class="alert alert-light"></div>
+
+        <h2>Active Hours Chart</h2>
+        <div class="chart-container">
+            <canvas id="activeHoursChart"></canvas>
+        </div>
+
+        <h2>Active Days</h2>
+        <div id="activeDays" class="alert alert-light"></div>
+
+        <h2>Word Cloud</h2>
+        <div id="wordCloud" class="chart-container"></div>
+
+        <h2>Top Users</h2>
+        <div id="topUsers" class="alert alert-light"></div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="static/script.js"></script>
+</body>
+</html>

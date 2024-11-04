@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e5ddd5;
+    color: #075e54;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    width: 60%;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #128c7e;
+}
+
+input, button {
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
+#charts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
