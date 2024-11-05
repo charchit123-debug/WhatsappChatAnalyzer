@@ -1,6 +1,3 @@
-Certainly! Below is a detailed README file template for your WhatsApp Chat Analyzer project. You can modify it as needed to match your project's specifics.
-
----
 
 # WhatsApp Chat Analyzer
 
